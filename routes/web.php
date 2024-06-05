@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $absen = Absen::orderBy('id', 'DESC')->get();
+
     return view('welcome', compact('absen'));
 });
 

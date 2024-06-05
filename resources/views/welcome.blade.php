@@ -54,7 +54,7 @@
                         @forelse ($absen as $item)
                         <tr>
                             <td>{{$no++}}</td>
-                            <td>{{$item->siswa->nama}}</td>
+                            <td>{{$item->siswa->nama_lengkap}}</td>
                             <td>{{$item->created_at}}</td>
                         </tr>
                         @empty

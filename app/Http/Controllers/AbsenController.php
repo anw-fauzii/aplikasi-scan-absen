@@ -28,7 +28,7 @@ class AbsenController extends Controller
             $pp = Siswa::find($request->siswa_id);
             return redirect('/')->with('alert', [
                 'type' => 'success',
-                'title' => 'Selamat Datang ' . $pp->nama,
+                'title' => 'Selamat Datang ' . $pp->nama_lengkap,
                 'message' => 'Silahkan masuk, terima kasih'
             ]);
         }
