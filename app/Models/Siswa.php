@@ -15,6 +15,6 @@ class Siswa extends Model
 
     public function absens()
     {
-        return $this->hasMany(Absen::class, 'siswa_id', 'nis'); // siswa_id di tabel absen mengacu ke nis di tabel siswa
+        return $this->hasMany(Absen::class, 'siswa_id', 'nis');
     }
 }

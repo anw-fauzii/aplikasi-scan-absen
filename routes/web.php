@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AbsenController;
 use App\Models\Absen;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,3 +23,8 @@ Route::get('/', function () {
 });
 
 Route::resource('/absen', AbsenController::class);
+
+Route::get('/optimize', function () {
+    $exitCode = Artisan::call('optimize');
+    return '<h1>Clear Config cleared</h1>';
+});

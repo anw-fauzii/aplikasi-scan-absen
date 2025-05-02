@@ -23,7 +23,7 @@
 </head>
 <body>
     <div class="container mt-4">
-        <h1 class="text-center">Presensi Kehadiran Akhirussanah Angkatan 1</h1>
+        <h1 class="text-center" style="margin-bottom: 10px;">Presensi Pembinaan Growth Mindset</h1>
         <div class="row">
             <div class="col-3">
                 <div class="card bg-white p-2 rounded-3 border-0 shadow">
@@ -42,7 +42,8 @@
                     <thead>
                         <tr>
                             <th scope="col" width="15%">No</th>
-                            <th scope="col" width="55%"">Nama</th>
+                            <th scope="col" width="40%"">Nama</th>
+                            <th scope="col" width="15%">Kelas</th>
                             <th scope="col" width="30%"">Tanggal</th>
                         </tr>
                     </thead>
@@ -55,16 +56,18 @@
                         <tr>
                             <td>{{$no++}}</td>
                             <td>{{$item->siswa->nama_lengkap}}</td>
+                            <td>{{$item->siswa->tempat_lahir}}</td>
                             <td>{{$item->created_at}}</td>
                         </tr>
                         @empty
                         <tr>
-                            <td colspan="3" class="text-center">Belum ada yang hadir</td>
+                            <td colspan="4" class="text-center">Belum ada yang hadir</td>
                         </tr>
                         @endforelse
                         
                     </tbody>
                 </table>
+                <a class="btn btn-success" href="{{route('absen.create')}}">Download Data</a>
             </div>
         </div>
     </div>

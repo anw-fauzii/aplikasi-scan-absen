@@ -8,10 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Absen extends Model
 {
     use HasFactory;
-    protected $connection = 'mysql2';
+    protected $connection = 'mysql';
     protected $table = "absen";
     protected $fillable = [
-        'siswa_id', 'tanggal',
+        'siswa_id',
+        'tanggal',
+        'role'
     ];
 
     public function siswa()
